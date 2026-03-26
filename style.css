@@ -1,0 +1,704 @@
+ * {
+     margin: 0;
+     padding: 0;
+     scroll-behavior: smooth;
+ }
+
+
+ html,
+ body {
+     width: 100%;
+     height: 100%;
+     /* overflow-x: hidden; */
+ }
+
+ header {
+     align-items: center;
+     justify-content: center;
+     display: flex;
+ }
+
+ /* ====== Navbar Utama ====== */
+ .navbar {
+     position: fixed;
+     top: 20px;
+     width: 90%;
+     height: 70px;
+     background: rgba(30, 30, 30, 0.55);
+     backdrop-filter: blur(12px);
+     border: 1px solid rgba(255, 255, 255, 0.15);
+     border-radius: 50px;
+     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0 35px;
+     z-index: 1000;
+     transition: all 0.4s ease;
+ }
+
+ /* ====== Logo ====== */
+
+ .nav-links {
+     list-style: none;
+     display: flex;
+     gap: 35px;
+ }
+
+ .nav-links li a {
+     text-decoration: none;
+     color: #f1f1f1;
+     font-family: "Poppins", sans-serif;
+     font-weight: 500;
+     letter-spacing: 0.5px;
+     font-size: clamp(13px, 1.5vw, 18px);
+     position: relative;
+     transition: all 0.3s ease;
+ }
+
+ .nav-links li a::after {
+     content: "";
+     position: absolute;
+     left: 0;
+     bottom: -4px;
+     width: 0%;
+     height: 2px;
+     background: linear-gradient(90deg, #b5b81e, #e8c27c);
+     border-radius: 2px;
+     transition: width 0.3s ease;
+ }
+
+ .nav-links li a:hover {
+     color: #e8c27c;
+ }
+
+ .nav-links li a:hover::after {
+     width: 100%;
+ }
+
+ .content {
+     width: 100%;
+     height: 100vh;
+     background-image: url(img/masjid.png);
+     background-size: cover;
+     background-position: center center;
+     /* atau top center jika ingin fokus ke atas */
+     background-repeat: no-repeat;
+     display: flex;
+     justify-content: center;
+     align-items: left;
+     flex-direction: column;
+
+
+
+ }
+
+ .content .teks {
+     /* Warna putih dengan transparansi */
+     padding: 1px;
+     border-radius: 10px;
+
+     margin-left: 10px;
+ }
+
+ .content h1 {
+     color: rgb(0, 0, 0);
+     font-size: 90px;
+     font-family: 'poppins', sans-serif;
+     margin: 10px;
+ }
+
+ .content p {
+     color: #313131c5;
+     font-size: 20px;
+     line-height: 1.6;
+     max-width: 600px;
+     font-family: 'Poppins', sans-serif;
+     background: #fffbf5;
+     padding: 15px 20px;
+     border-radius: 1px;
+     margin: 10px 0;
+     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+ }
+
+ .content2 {
+     width: 100%;
+     height: 100vh;
+     background-color: rgb(255, 255, 255);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .content2 .card1,
+ .content2 .card2 {
+     width: 50%;
+     height: 80vh;
+     margin: 20px;
+ }
+
+ .content2 .card1 {
+     background-color: rgb(245, 245, 220);
+     background-image: url(img/about.webp);
+     background-size: cover;
+     background-position: center;
+ }
+
+ .content2 .card2 {
+     background-color: rgb(255, 255, 255);
+     padding: 20px;
+     border-radius: 10px;
+
+     display: flex;
+     justify-content: center;
+     align-items: left;
+     flex-direction: column;
+     text-align: baseline;
+     font-family: 'poppins', sans-serif;
+ }
+
+ .content2 .card2 h1 {
+     color: rgb(0, 0, 0);
+     font-size: 40px;
+     margin-bottom: 20px;
+     list-style: none;
+     line-height: 1.5;
+ }
+
+ .content2 .card2 p {
+     color: rgba(0, 0, 0, 0.63);
+     font-size: 18px;
+     line-height: 1.6;
+     margin-bottom: 15px;
+     text-align: justify;
+ }
+
+ .content2 .button {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     text-decoration: none;
+     width: 140px;
+     height: 45px;
+     /* ini wajib biar bisa center vertikal */
+
+     background-color: #000;
+     color: #fff;
+
+     cursor: pointer;
+     font-size: 16px;
+     font-family: Arial, sans-serif;
+
+     transition: 0.2s;
+ }
+
+ .content2 .button:hover {
+     background-color: rgb(65, 65, 65);
+ }
+
+ .content2 .button:hover {
+     background-color: rgb(65, 65, 65);
+ }
+
+ /* ====================== SECTION WRAPPER ====================== */
+ .content3 {
+     width: 100%;
+     height: auto;
+     background-color: #f5f5f5;
+     padding: 60px 0;
+ }
+
+ /* ====================== JUDUL ====================== */
+ .content3 .judul_besar {
+     color: #000000;
+     text-align: center;
+     font-family: 'poppins', 'sans-serif';
+     margin-bottom: 40px;
+     color: rgb(0, 0, 0);
+     font-size: 40px;
+     font-family: 'poppins', sans-serif;
+     margin: 10px;
+     letter-spacing: 1px;
+ }
+
+ /* ====================== ROW GAMBAR ====================== */
+ .content3 .container1 {
+     width: 100%;
+     height: 50vh;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 50px;
+     overflow-x: hidden;
+ }
+
+ .content3 .container1 .img {
+     flex: 1;
+     height: 90%;
+     margin: 0 15px;
+     border-radius: 12px;
+    
+     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+
+ }
+
+ .content3 .container1 .img img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     transition: transform .4s ease;
+ }
+
+ .content3 .container1 .img:hover img {
+     transform: scale(1.05);
+ }
+
+ /* ====================== CARD SECTION ====================== */
+ .content3 .container2 {
+     width: 100%;
+     height: auto;
+     display: flex;
+     justify-content: center;
+     align-items: stretch;
+ }
+
+ /* Card rapi */
+ .content3 .container2 .card {
+     flex: 1;
+     background-color: #ffffff;
+     padding: 28px;
+     margin: 0 15px;
+
+     border-radius: 12px;
+     border: 1px solid #dcdcdc;
+     box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
+
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+
+     font-family: 'Poppins', sans-serif;
+     text-align: left;
+     line-height: 1.6;
+     transition: transform .25s ease;
+ }
+
+ /* Hover lembut */
+ .content3 .container2 .card:hover {
+     transform: translateY(-5px);
+ }
+
+ /* Judul card */
+ .content3 .container2 .card h1 {
+     color: #3b3b3b;
+     font-size: 26px;
+     margin-bottom: 15px;
+     font-weight: 600;
+ }
+
+ /* Paragraf card */
+ .content3 .container2 .card p {
+     color: #555;
+     font-size: 17px;
+     line-height: 1.7;
+ }
+
+ .content4 {
+
+
+     padding: 60px 40px;
+     background: linear-gradient(180deg, #0d3b2e, #06261f);
+     display: flex;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     gap: 30px;
+     border-radius: 40px 40px 0 0;
+     font-family: 'Poppins', sans-serif;
+
+ }
+
+ .content4 .footer-col {
+     width: 25%;
+
+     padding: 0 90px;
+     margin-right: 40px;
+ }
+
+ .content4 h1 {
+     font-size: 35px;
+     color: #ffcc4c;
+     margin-bottom: 15px;
+ }
+
+ .content4 h2 {
+     font-size: 20px;
+     letter-spacing: 1px;
+     color: #ffcc4c;
+     margin-bottom: 15px;
+ }
+
+ .content4 p {
+     font-size: 16px;
+     line-height: 1.7;
+     color: #d7d7d7;
+ }
+
+ .content4 ul {
+     padding: 0;
+     list-style: none;
+ }
+
+ .content4 ul li {
+     font-size: 15px;
+     margin-bottom: 10px;
+     color: #d2d2d2;
+ }
+
+ /* Tombol WA */
+ .sosmed-btn {
+     display: inline-block;
+     padding: 10px 18px;
+     text-decoration: none;
+     border: 1px solid #ffcc4c;
+     border-radius: 10px;
+     color: #ffcc4c;
+     transition: 0.3s ease;
+     font-size: 15px;
+ }
+
+ .sosmed-btn:hover {
+     background-color: #ffcc4c;
+     color: #0d3b2e;
+ }
+
+
+
+ /* Tombol menu disembunyikan di desktop */
+ .menu-toggle {
+     display: none;
+     font-size: 32px;
+     color: rgb(0, 0, 0);
+     cursor: pointer;
+     user-select: none;
+ }
+
+ /* ===== TOMBOL MENU (MOBILE) ===== */
+ .menu-toggle {
+     display: none;
+     font-size: 34px;
+     color: white;
+     cursor: pointer;
+     z-index: 2001;
+ }
+
+
+ /* ================= MOBILE RESPONSIVE ================= */
+ @media (max-width: 768px) {
+     * {
+         box-sizing: border-box;
+     }
+
+     body,
+     html {
+         overflow-x: hidden;
+     }
+
+     /* ===== NAVBAR ===== */
+
+     /* Sembunyikan menu */
+
+     /* ===== CONTENT HERO ===== */
+     .content {
+         height: 90vh;
+         background-position: center;
+         padding: 20px;
+     }
+
+     .teks {
+
+         display: flex;
+         flex-direction: column;
+         height: 90vh;
+         /* atur sesuai kebutuhan tinggi kotak */
+         justify-content: space-between;
+     }
+
+     .teks h1 {
+         font-size: 45px;
+         line-height: 1.1;
+         margin: 200px 0 20px;
+
+     }
+
+     .teks p {
+         margin: 0;
+         /* pastikan tidak ada margin ajaib */
+         font-size: 16px;
+         padding: 12px 15px;
+     }
+
+     /* ===== CONTENT2 ===== */
+     .content2 {
+         flex-direction: column;
+         height: auto;
+         padding: 40px 15px;
+     }
+
+     .content2 .card1,
+     .content2 .card2 {
+         width: 100%;
+         height: 50vh;
+         margin: 10px 0;
+     }
+
+     .content2 .card2 {
+         height: auto;
+     }
+
+     .content2 .card2 h1 {
+         font-size: 28px;
+     }
+
+     .content2 .card2 p {
+         font-size: 15px;
+     }
+
+     .content2 .button {
+         width: 120px;
+         height: 40px;
+         font-size: 14px;
+     }
+
+     /* ===== CONTENT3 ===== */
+     .content3 {
+         width: 100%;
+
+     }
+
+     .content3 .judul-besar {
+         font-size: 32px;
+         margin-bottom: 25px;
+     }
+
+     /* Gambar 3 kolom → jadi 1 kolom */
+     .content3 .container1 {
+         height: auto;
+         flex-direction: column;
+         padding: 0 15px;
+     }
+
+     .content3 .container1 .img {
+         width: 100%;
+         height: 220px;
+         margin: 10px 0;
+     }
+
+     /* Card container */
+     .content3 .container2 {
+         flex-direction: column;
+         padding: 0 15px;
+     }
+
+     .content3 .container2 .card {
+         margin: 12px 0;
+         padding: 22px;
+     }
+
+     .content3 .container2 .card h1 {
+         font-size: 24px;
+     }
+
+     .content3 .container2 .card p {
+         font-size: 15px;
+     }
+
+     /* Footer */
+     .content4 {
+         flex-direction: column;
+         gap: 25px;
+         padding: 40px 25px;
+         text-align: left;
+     }
+
+     .content4 h1 {
+         font-size: 28px;
+     }
+
+     .content4 h2 {
+         font-size: 18px;
+     }
+
+     .sosmed-btn {
+         padding: 10px 15px;
+         font-size: 14px;
+     }
+ }
+
+
+ /* ====== Navbar Utama ====== */
+
+
+ @media (max-width: 768px) {
+
+     .navbar {
+         border-radius: 0;
+         margin: 0;
+
+     }
+
+     .menu-toggle {
+         position: relative;
+         display: block;
+         cursor: pointer;
+         z-index: 1001;
+         font-size: 28px;
+         color: #f6e27f;
+         transition: transform 0.3s ease;
+     }
+
+     .menu-toggle:hover {
+         transform: scale(1.1);
+         filter: drop-shadow(0 0 6px rgba(214, 180, 64, 0.6));
+     }
+
+     /* Garis emas animasi */
+     .menu-toggle::before {
+         content: "";
+         position: absolute;
+         bottom: -6px;
+         left: 50%;
+         width: 0;
+         height: 3px;
+         background: linear-gradient(90deg, #d4af37, #f9e79f);
+         border-radius: 3px;
+         transform: translateX(-50%);
+         transition: width 0.4s ease;
+         box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+     }
+
+     .menu-toggle.active::before {
+         width: 80%;
+     }
+
+     /* 🌫️ Menu */
+     .nav-links {
+         position: absolute;
+         top: 85px;
+         right: 0;
+         background: rgba(20, 20, 20, 0.95);
+         backdrop-filter: blur(15px);
+         width: 100%;
+         flex-direction: column;
+         align-items: center;
+         gap: 18px;
+         padding: 40px 0;
+         border-radius: 0 0 25px 25px;
+         height: 100vh;
+         opacity: 0;
+         transform: translateY(-20px) scale(0.96);
+         pointer-events: none;
+         transition: opacity 0.6s cubic-bezier(0.25, 0.8, 0.25, 1),
+             transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+         box-shadow: 0 6px 25px rgba(0, 0, 0, 0.35);
+     }
+
+     .nav-links.show {
+         opacity: 1;
+         transform: translateY(0) scale(1);
+         pointer-events: auto;
+     }
+
+     .nav-links li {
+         width: 100%;
+         text-align: center;
+     }
+
+     .nav-links li a {
+         display: inline-block;
+         width: 85%;
+         padding: 14px 0;
+         font-size: 17px;
+         font-weight: 500;
+         color: #f8f8f8;
+         letter-spacing: 0.8px;
+         text-transform: capitalize;
+         border-radius: 10px;
+         transition: all 0.3s ease;
+     }
+
+     .nav-links li a:hover {
+         background: rgba(255, 215, 0, 0.1);
+         transform: scale(1.08);
+         color: #ffd700;
+         text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+     }
+
+     /* efek muncul tiap item biar elegan */
+     .nav-links.show li {
+         animation: fadeSlide 0.4s ease forwards;
+     }
+
+     .nav-links.show li:nth-child(1) {
+         animation-delay: 0.1s;
+     }
+
+     .nav-links.show li:nth-child(2) {
+         animation-delay: 0.15s;
+     }
+
+     .nav-links.show li:nth-child(3) {
+         animation-delay: 0.2s;
+     }
+
+     .nav-links.show li:nth-child(4) {
+         animation-delay: 0.25s;
+     }
+
+     .nav-links.show li:nth-child(5) {
+         animation-delay: 0.3s;
+     }
+
+     .nav-links.show li:nth-child(6) {
+         animation-delay: 0.35s;
+     }
+
+     .nav-links.show li:nth-child(7) {
+         animation-delay: 0.4s;
+     }
+
+     .nav-links.show li:nth-child(8) {
+         animation-delay: 0.45s;
+     }
+
+     .nav-links.show li:nth-child(9) {
+         animation-delay: 0.5s;
+     }
+
+     .nav-links.show li:nth-child(10) {
+         animation-delay: 0.55s;
+     }
+
+     .nav-links.show li:nth-child(11) {
+         animation-delay: 0.6s;
+     }
+
+     @keyframes fadeSlide {
+         from {
+             opacity: 0;
+             transform: translateY(-10px);
+         }
+
+         to {
+             opacity: 1;
+             transform: translateY(0);
+         }
+     }
+ }
+
+ /* ====== Scroll Effect (Optional) ====== */
+ .navbar.scrolled {
+     background: rgba(20, 20, 20, 0.9);
+     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.35);
+ }
