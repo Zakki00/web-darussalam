@@ -9,7 +9,6 @@
  body {
      width: 100%;
      height: 100%;
-     /* overflow-x: hidden; */
  }
 
  header {
@@ -230,7 +229,7 @@
      justify-content: space-between;
      align-items: center;
      margin-bottom: 50px;
-     overflow-x: hidden;
+     /* overflow-x: hidden; */
  }
 
  .content3 .container1 .img {
@@ -400,15 +399,7 @@
          box-sizing: border-box;
      }
 
-     body,
-     html {
-         overflow-x: hidden;
-     }
-
-     /* ===== NAVBAR ===== */
-
-     /* Sembunyikan menu */
-
+    
      /* ===== CONTENT HERO ===== */
      .content {
          height: 90vh;
